@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="../static/styles.css" rel="stylesheet" type="text/css" />
+</head>
+  <body> 
+    <p>Guesses = {{session.guesses}}</p>
+    <p>Results = {{session.results}}</p>
+    <form action="/" method="post">
+    <label for="guess"><b>Guess a Word: </b></label>
+    <input  type="text" name="guess" maxlength="5" required>
+    <button type="submit">Enter</button>
+    </form>
+
+	<a href="/reset">Reset</a>
+  </body>
+</html>
