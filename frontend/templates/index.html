@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/static/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="center">
+            <h1>Gurt</h1>
+        </div>
+        <div id="wordGrid">
+            {% for i in range(0, guesses|length) %} 
+                <div class="wordRow"> 
+                    {% for j in range(0, results[i]|length) %} 
+                        <p class="charBox {{ results[i][j] }}">{{ guesses[i][j] }}</p> 
+                    {% endfor %} 
+                </div> 
+                <br> 
+            {% endfor %} 
+        </div>
+    </body>
+</html>

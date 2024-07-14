@@ -1,0 +1,39 @@
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.wordRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.charBox{
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 1em;
+    font-size: x-large;
+
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.MISS{
+    background-color: gray;
+}
+
+.HIT{
+    background-color: green;
+}
+
+.CLOSE{
+    background-color: darkgoldenrod;
+}
+
+#wordGrid{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
