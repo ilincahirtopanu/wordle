@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="static/style.css" rel="stylesheet" type="text/css" />
+</head>
+	<body>
+		<div class="center">
+			<h1>Gurtle</h1>
+		</div>
+		{% if session['guesses']|length > 0 %}
+			<div id="wordGrid">
+				{% for i in range(0, session['guesses']|length) %}
+					<div class="wordRow">
+						{% for j in range(0, results[i]|length) %}
+						<p class="charBox {{ results[i][j] }}">{{ guesses[i][j] }}</p>
+						{% endfor %}
+					</div>
+					<br>
+				{% endfor %}
+			</div>
+		{% endif %}
+		<div class="center">
+			<form action="/" method="post" >
+				<label for="guess"><b>Guess a Word: </b></label>
+				<input type="text" name="guess" maxlength="5" required>
+				<button type="submit">Enter</button>
+			</form>
+		</div>
+	</body>
+</html>
